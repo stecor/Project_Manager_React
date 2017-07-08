@@ -6,7 +6,7 @@ class ProjectItem extends Component {
   render() {
     return (
       <li className="Project">
-        My Projects
+        <strong>{this.props.project.title}</strong>: {this.props.project.category}
       </li>
     );
   }
