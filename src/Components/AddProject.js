@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
+import PropTypes from 'prop-types';
 
 
 class AddProject extends Component {
@@ -37,30 +38,25 @@ class AddProject extends Component {
     });
     return (
       <div>
-        <h3>Add Project</h3>
+        <h3>New Project</h3>
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <div>
-            <label>Title</label><br/>
-            <input type="text" ref="title"/>
-          </div>
-          <div>
-            <label>Category</label><br/>
-            <select ref="category">
-            {categoryOptions}
-            </select>
-          </div>
-          <br/>
-          <input type="submit" value="Submit"/>
-          <br/>
+            <div>
+              <label>Title: </label>
+              <input type="text" ref="title"/>
+              <label> Category: </label>
+              <select ref="category">{categoryOptions}</select>   <input type="submit" value="Add Project"/>
+            </div>
         </form>
+        <br/>
+        <hr/>
       </div>
     );
   }
 }
 
 AddProject.propTypes = {
-  categories:React.PropTypes.array,
-  addProject:React.PropTypes.func
+  categories: PropTypes.array,
+  addProject: PropTypes.func
 }
 
 export default AddProject;

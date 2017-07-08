@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TodoItem from './TodoItem';
-
+import PropTypes from 'prop-types';
 
 class Todos extends Component {
 
@@ -18,7 +18,7 @@ class Todos extends Component {
     }
     return (
       <div className="Todos">
-        <h3>Todo List</h3>
+        <h3>Todo List from Fake Online REST API for Testing and Prototyping</h3>
         {todoItems}
       </div>
     );
@@ -26,7 +26,7 @@ class Todos extends Component {
 }
 
 Todos.propTypes = {
-  todos:React.PropTypes.array,
+  todos:PropTypes.array,
 }
 
 export default Todos;
